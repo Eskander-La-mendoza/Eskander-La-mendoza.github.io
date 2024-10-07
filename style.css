@@ -1,0 +1,369 @@
+@font-face {
+    font-family: 'fab';
+    src: url("fonts/fab.woff2");
+}
+@font-face {
+    font-family: 'fas';
+    src: url("fonts/fas.woff2");
+}
+@font-face {
+    font-family: 'far';
+    src: url("fonts/far.woff2");
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+html,body {
+   height: 100%;
+}
+.site-header{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(background/1135880.png);
+    background-position: center;
+    background-size: auto no-repeat;
+}
+.site-header_overlay{
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.5);
+    text-align:center;
+    color: #0000ff;
+}
+.site-header_title, .site-header_subtitle {
+    text-shadow: 0 0 2px #fff, 0 0 3px #fff,
+    0 0 5px #fff, 0 0 10px #0055ff,
+    0 0 14px #0077ff, 0 0 16px #0099ff,
+    0 0 17px #00bbff, 0 0 18px #00ddff;
+}
+.site-header_subtitle {
+    font-size: 1.8rem;
+}
+.site-header_title {
+    font-size: 2.6rem;
+}
+.nav-menu {
+    list-style-type: none;
+    font-size: 1.25rem;
+    width: fit-content;
+    height: fit-content;
+    text-decoration: none;
+    color: black;
+    display: block; 
+    border: solid 1px #8cc5d9;
+    margin: auto;
+    padding: 0.3rem 0.5rem;
+    background: linear-gradient(#abe4f8, #74d0f4);
+    border-radius: 0.0rem;
+    box-shadow: inset 0 0 0 1px #cdeffb;
+    text-shadow: 0 1px 0 #b6e6f9;
+    border-bottom: solid 3px #589cb6;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+th {border: 1px solid red;}
+td {
+    border: 1px solid #8cc5d9;
+    text-align: center;
+    padding: 5px;
+}
+table{
+    border: solid 1px #8cc5d9;
+    margin: auto;
+    font-size: 1.5rem;
+    padding: 0.3rem 0.5rem;
+    color: black;
+    background: linear-gradient(grey, white);
+    box-shadow: inset 0 0 0 1px #cdeffb;
+    text-shadow: 0 1px 0 #b6e6f9;
+    border-bottom: solid 3px #589cb6;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 1;
+    border-collapse: collapse;
+}
+.active {
+    background: 20% blue;
+    padding: 2px;
+    border-radius: 12.5%;
+    color: white;
+}
+.nav-menu li{
+    text-align: center;
+    padding-right: 5px;
+    border-right: 2px solid #555;
+    display: inline;
+}
+.nav-menu li:last-child {
+    border-right: none;
+}
+.nav-menu li a:hover {
+    background-color: #555;
+    border-radius: 12.5%;
+    padding: 2px;
+    color: white;
+}
+.nav-menu li a{
+    text-decoration: none;
+}
+.site-header_slogan, .site-header_call {
+    /* outline: 2px solid red; */
+    position: absolute;
+    width:100%;
+    text-align:center;
+}
+.site-header_call {
+    font-size: 1.5rem;
+    bottom: 15px;
+}
+.site-header_slogan {
+    bottom: 50px;
+}
+.btn {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: blue;
+    display: block; 
+    border: solid 1px #8cc5d9;
+    margin: 0.5rem;
+    padding: 0.3rem 0.5rem;
+    background: linear-gradient(#abe4f8, #74d0f4);
+    border-radius: 0.5rem;
+    box-shadow: inset 0 0 0 1px #cdeffb;
+    text-shadow: 0 1px 0 #b6e6f9;
+    border-bottom: solid 3px #589cb6;
+}
+.btn:hover, .dropdown:hover .btn {
+    background-color: #0b7dda;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: relative;
+    background-color: 25% #f1f1f1;
+    border-radius: 12.5%;
+    min-width: 120px;
+    z-index: 1;
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: table;
+}
+.dropdown-content a:hover {background-color: #ddd}
+.dropdown:hover .dropdown-content {
+    display: grid;
+    grid-template-columns: 150px 150px;
+}
+.top-menu{
+    /* outline: 2px solid brown; */
+    height: fit-content;
+    margin-top: 10px;
+}
+.top-menu_link{
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: blue;
+    display: inline-block; 
+    border: solid 1px #8cc5d9;
+    margin: 0.25rem;
+    padding: 0.3rem 0.5rem;
+    background: linear-gradient(#abe4f8, #74d0f4);
+    border-radius: 0.5rem;
+    box-shadow: inset 0 0 0 1px #cdeffb;
+    text-shadow: 0 1px 0 #b6e6f9;
+    border-bottom: solid 3px #589cb6;
+}
+.top-menu_link:active {
+    background: linear-gradient(#89d2ee, #84cae6);
+    border: solid 1px #5c8d9f;
+    box-shadow: inset 0 10px 15px 0 #79b9d2;
+    color: navy;
+}
+.site-main{
+    /* outline: 2px solid green; */
+    margin-top: 10px;
+    min-height: 70%;
+}
+.tours{
+    /* outline: 2px solid magenta; */
+    margin: 5px;
+    padding: 5px;
+}
+.tours-card {
+    outline: 2px solid lime;
+}
+.tours-card_title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #0000ff;
+    text-shadow: 0 0 2px #fff, 0 0 3px #fff,
+    0 0 5px #fff, 0 0 10px #0055ff,
+    0 0 14px #0077ff, 0 0 16px #0099ff,
+    0 0 17px #00bbff, 0 0 18px #00ddff;
+    margin-top: 10px;
+    margin-top: 10px;
+}
+.tours-card_description {
+    text-align: justify;
+    font-size: 1.3rem;
+}
+.tours-card_price {
+    text-align: right;
+    color: #0000ff;
+    margin-top: 5px;
+}
+.img-responsive{
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    border-radius: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.site-footer{
+    margin-top: 20px;
+    background: linear-gradient(to right, #000033, #000066, #000033);
+    color: #bbddff;
+    font-size: 1.3rem;
+    padding: 0.5rem;
+    text-align: center;
+}
+.site-footer a{
+    color: #bbddff;
+    text-decoration: none;
+}
+.socials_link--yt::before {
+    font-family: 'fab';
+    content: "\f167";
+    color:red;
+}
+.socials_link--in::before {
+    font-family: 'fab';
+    content: "\f16d";
+    color: violet
+}
+.socials_link--fb::before {
+    font-family: 'fab';
+    content: "\f082";
+    color:dodgerblue
+}
+.socials_link--vk::before {
+    font-family: 'fab';
+    content: "\f189";
+    color:blue;
+}
+.socials_link--tw::before {
+    font-family: 'fab';
+    content: "\f099";
+    color:skyblue;
+}
+.socials_link {
+    font-size: 3rem;
+    margin: 0.5rem;
+}
+.button{
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #bbddff;
+    display: inline-block;
+    border: solid 3px #bbddff;
+    margin: 0.2rem;
+    padding: 0.3rem 0.5rem;
+    border-radius: 0.5rem;
+}
+.fa-phone::before {
+    font-family: 'fas';
+    content: "\f2a0";
+    color: pink;
+}
+.fa-whatsapp::before {
+    font-family: 'fab';
+    content: "\f232";
+    color:lime;
+}
+.fa-telegram::before {
+    font-family: 'fab';
+    content: "\f3fe";
+    color:aqua;
+}
+.site-footer_copyright {
+    @media only screen and (min-width: 640px) {
+        html {
+            font-size: 17px;
+        }
+        .tours{
+            display: grid;
+            grid-template-columns: 300px 300px;
+            justify-content: center;
+            grid-gap: 2vw;
+        }
+    }
+    @media only screen and (min-width: 900px) {
+        html {
+            font-size: 18px;
+        }
+        .tours{
+            display: grid;
+            grid-template-columns: 400px 400px;
+            justify-content: center;
+            grid-gap: 3vw;
+        }
+    }
+    @media only screen and (min-width: 1300px) {
+        html {
+            font-size: 19px;
+        }
+        .tours{
+            display: grid;
+            grid-template-columns: 400px 400px 400px;
+            justify-content: center;
+            grid-gap: 2vw;
+        }
+    }
+}
+.conbutton.fa-phone::before{
+    font-family: 'fas';
+    content: "\f2a0";
+    color: greenyellow;
+}
+.conheader{
+    text-align: left;
+    color: black;
+}
+#conspec{
+    text-align: left;
+}
+.conspecnum{
+    text-align: left;
+    color: black;
+}
+h2.bout{
+    text-align: left;
+}
+p.bout{
+    text-align: justify;
+    color: black;
+}
+ul.bout{
+    text-align: left;
+}
+li.bout{
+    list-style: circle;
+    columns: black;
+}
+.news{
+    text-align: justify;
+    color: black;
+    outline: 2px solid #555;
+}
+.price_table{
+    overflow-y: scroll;
+}
